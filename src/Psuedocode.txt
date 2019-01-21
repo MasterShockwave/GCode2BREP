@@ -1,0 +1,24 @@
+if the command is G0 or G1, find the point data and count it as current point.
+	note that if one coord is missing, then this remains the same as the previous value.
+if there is an E command in the code, draw a line from previous point to current point.
+if not, store current point but don't draw line.
+
+___
+
+FileSelectFile, gcode_file [, Options, RootDir\Filename, Prompt, Filter]
+
+for each line in gcode
+	does the line begin with G0 or G1?
+		does the line have an E value in it
+			current point = XYZ (read)
+			create line b/w prev point and current point. If previous point is null, then goto Next line (break loop)
+		else
+			current point = XYZ (read)
+previous point = current point
+Next line
+
+function readXYZ(line as Integer, path as String)
+
+Xpos := InStr(Haystack, Needle,,1)
+	
+	excel LEFT(RIGHT(A1,LEN(A1)-FIND("X",A1,1)),FIND(" ",RIGHT(A1,LEN(A1)-FIND("X",A1,1)),1)-1)
