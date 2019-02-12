@@ -1,7 +1,0 @@
-<geometry> =  
-    <2D curves>  
-    <3D curves>  
-    <3D polygons> 
-    <polygons on triangulations>  
-    <surfaces>  
-    <triangulations>;
